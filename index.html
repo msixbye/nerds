@@ -3,10 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Нёрдс - главная</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
-	<header>
+	<header class="header">
 
 		<nav class="header-navigation container">
 			<a href="#" class="header-navigation__logo"><img src="#" alt="logo">Лого</a>
@@ -30,19 +33,19 @@
 				<li>
 					<b>Долго, дорого, скурпулезно</b>
 					<p>Математически выверенный дизайн для вашего сайта или мобильного приложения</p>
-					<a href="#">Узнать больше</a>
+					<a class="button slider__button" href="#">Узнать больше</a>
 				</li>
 
 				<li>
 					<b>Любим математику как никто другой</b>
 					<p>Никакого креатива, только математические формулы для расчета идеальных пропорций</p>
-					<a href="#">Узнать больше</a>
+					<a class="button slider__button" href="#">Узнать больше</a>
 				</li>
 
 				<li>
 					<b>Только ночь, только хардкор</b>
 					<p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-					<a href="#">Узнать больше</a>
+					<a class="button slider__button" href="#">Узнать больше</a>
 				</li>
 			</ul>
 
@@ -72,7 +75,7 @@
 			</ul>
 		</section>
 		
-		<section class="about">
+		<section class="about container">
 			<div class="about-us">
 				<b class="about-us__title">Мы-маленькая, но гордая дизайн-студия из Краснодара.</b>
 				<p class="about-us__description">Исповедуем принципы минимализма и чистоты. Ставим математический
@@ -85,18 +88,26 @@
 				</ul>
 			</div>
 			<div class="about-stats">
-				<!-- табличные -->
-				<caption class="">с 2004 года любим точность во всем:</caption>
-				<ul> <!-- табличные --> 
- 					<li>146% уровень самоотдачи</li>
-					<li>100% соблюдение сроков</li>
-					<li>50% минимальная предоплата</li>
-				</ul>
+				<table class="table">
+				<caption class="table__caption">с 2004 года любим точность во всем:</caption>
+				<tbody class="table__body">
+					<tr class="table__row"> <!-- табличные --> 
+ 						<th class="table__header table__stat">146<sup class="table__percent">%</sup></th>
+						<th class="table__header table__stat">100<sup class="table__percent">%</sup></th>
+						<th class="table__header table__stat">50<sup class="table__percent">%</sup></th>
+					</tr>
+					<tr class="table__row">
+						<th class="table__header">Уровень самоотдачи</th>
+						<th class="table__header">Соблюдение сроков</th>
+						<th class="table__header">Минимальная предоплата</th>
+					</tr>
+				</tbody>
+				</table>
 			</div>
 		</section>
 
-		<section class="partners">
-			<!-- заголовок -->
+		<section class="partners container">
+			<h2 class="visually-hidden">Наши партнеры:</h2>
 			<ul class="partners-list">
 				<li class="partners-list__item"><a class="partners-list__link" href="#"><img class="partners-list__img" src="#" alt="htmlacademy"></a></li>
 				<li class="partners-list__item"><a class="partners-list__link" href="#"><img class="partners-list__img" src="#" alt="borodinski"></a></li>
@@ -110,11 +121,11 @@
 	<footer class="footer">
 		<section class="map">
 			<div class="map-contacts">
-				<h2 class="map-contacts__title">nerds design studio</h2>
-				<p class="map-contacts__description">191186, Санкт-Петербург, ул.
+				<h2 class="map-contacts__title">nёrds design studio</h2>
+				<p class="map-contacts__description map-contacts--text">191186, Санкт-Петербург, ул.
 					Б. Конюшенная, д. 19/8</p>
-				<p class="map-contacts__phone">тел. +7 (812) 275-75-75</p>
-				<button type="button map-contacts__button">Напишите нам</button>
+				<p class="map-contacts__phone map-contacts--text">тел. +7 (812) 275-75-75</p>
+				<button class="button map-contacts__button button--border" type="button">Напишите нам</button>
 			</div>
 		</section>
 		
