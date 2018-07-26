@@ -77,6 +77,10 @@ input[type="radio"].visually-hidden {
 	margin-top: 12px;
 }
 
+.header-menu__item {
+	position: relative;
+}
+
 .header-menu__link {
 	line-height: 30px;
 	font-weight: 500;
@@ -121,10 +125,13 @@ input[type="radio"].visually-hidden {
 }
 
 .service__item-description {
+	display: block;
 	margin: 0;
 	padding: 0;
 	margin-top: 16px;
 	color: #283136;
+
+	width: 250px;
 }
 
 .button {
@@ -324,6 +331,8 @@ input[type="radio"].visually-hidden {
 	width: 320px;
 
 	padding-top: 48px;
+	padding-bottom: 47px;
+	padding-left: 50px;
 
 	background-color: #ffffff;
 }
@@ -335,17 +344,17 @@ input[type="radio"].visually-hidden {
 	text-transform: uppercase;
 
 	margin: 0;
-	margin-left: 50px;
     padding: 0;
 }
 
 .map-contacts--text {
+	display: block;
 	font-size: 16px;
 	line-height: 18px;
 	color: #666666;
 
+	width: 210px;
 	margin: 0;
-	margin-left: 52px;
     margin-top: 23px;
 }
 
@@ -360,8 +369,6 @@ input[type="radio"].visually-hidden {
 
 .map-contacts__button {
 	margin-top: 37px;
-	margin-left: 50px;
-	margin-bottom: 47px;
 	padding-left: 45px;
     padding-right: 45px;
 
@@ -430,6 +437,16 @@ input[type="radio"].visually-hidden {
 
 .header-catalog {
 	padding-bottom: 108px;
+}
+
+.header-menu--active::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -4px;
+	width: 74px;
+	height: 2px;
+	border-bottom: 2px solid #fb565a;
 }
 
 .catalog-title {
@@ -546,6 +563,8 @@ input[type="radio"].visually-hidden {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
+	margin-bottom: 96px;
 }
 
 .catalog-sort-list--main {
@@ -564,8 +583,20 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-shop__item {
-	width: 360px;
-	margin-top: 30px;
+	position: relative;
+	width: 358px;
+	margin-top: 71px;
+
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.catalog-shop__item:hover {
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.catalog-shop__item:hover .catalog-shop__hover {
+	display: block;
 }
 
 .catalog-shop__item:nth-child(-n+2) {
@@ -573,7 +604,45 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-shop__hover {
+	display: none;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: -1px;
+	left: 0px;
+
+	width: 360px;
+	height: 231px;
+
 	background-color: #eeeeee;
+}
+
+.catalog-shop__item::before {
+	content: "";
+	position: absolute;
+	top: -40px;
+    left: -1px;
+
+	width: 360px;
+	height: 40px;
+
+	background-image: url("../img/browser.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.catalog-shop__hover::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: -387px;
+    left: -1px;
+
+	width: 360px;
+	height: 40px;
+
+	background-image: url("../img/browser-header.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 
 .catalog-shop__img {
@@ -584,25 +653,71 @@ input[type="radio"].visually-hidden {
 	font-size: 18px;
 	line-height: 30px;
 	font-weight: 700;
+	text-align: center;
 	text-transform: uppercase;
 
 	margin: 0;
+	margin-top: 26px;
+
 }
 
 .catalog-shop__about {
+	display: block;
+	width: 230px;
 	font-size: 16px;
 	line-height: 18px;
 	color: #666666;
+	text-align: center;
+
+	margin: 0;
+	margin-top: 15px;
+	margin-left: 61px;
+}
+
+.catalog-shop__button {
+	margin-top: 30px;
+    margin-left: 80px;
+    padding-left: 65px;
+    padding-right: 60px;
+}
+
+.pagination {
+	width: 443px;
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 60px;
+    margin-bottom: 59px;
 }
 
 .pagination__link {
+	display: block;
+	box-sizing: border-box;
 	line-height: 18px;
 	font-weight: 500;
 	text-transform: uppercase;
+	text-align: center;
 	color: #000000;
+
+	width: 50px;
+	height: 50px;
+	padding-top: 16px;
+	padding-bottom: 16px;
 
 	background-color: #eeeeee;
 	border-radius: 3px;
+}
+
+.pagination__link--correct {
+	padding-top: 13px;
+
+	background-color: #ffffff;
+	border: 3px solid #dbdbdb;
+}
+
+.pagination__link--button {
+	text-align: center;
+	width: 260px;
 }
 
 .pagination__link:hover {
@@ -613,6 +728,9 @@ input[type="radio"].visually-hidden {
 	background-color: #d5d5d5;
 	box-shadow: inset 0 3px 0 rgba(0, 0, 0, 0.1);
 }
+
+/*Сетку и Особенности сделать margin а не flex !!!!!!
+Ограничить контейнеры со словами/
 
 /*=======================range=======================*/
 
