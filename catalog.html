@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
@@ -21,7 +21,22 @@
 			</ul>
 
 			<ul class="header-user-menu">
-				<li class="header-menu__item"><a class="header-menu__link header-menu__link--cart" href="#">Корзина</a></li>
+				<li class="header-menu__item">
+					<a class="header-menu__link" href="#">
+						<span class="header-menu__cart">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15" height="15" viewBox="0 0 15 15">
+  							<metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+							<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+						   	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+						      <rdf:Description rdf:about=""/>
+						   	</rdf:RDF>
+							</x:xmpmeta>                   
+							<?xpacket end="w"?></metadata>
+							<image id="cart-icon" width="15" height="15" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiCAcNICJyw5VEAAAAk0lEQVQY032QPQ6CQBBG3xrR1tZTUHESq/VOVlS0JjINhbUHMIZo7DwDN9CABgtmxcR1vmbyzcv8urIH4OwzIppoTGUew65cADeWROV6QCpWcTw0r8HCRxtfeBrY37n+kIYN6VRNzXj3gz1bDv6lm4Os2VlvORl3/5dWSy6t5GM6+DC7JaHzsw9WH2YXdBRfXdW/AVZ0LKUlb6qgAAAAAElFTkSuQmCC"/>
+							</svg>
+						</span>Корзина
+					</a>
+				</li>
 			</ul>
 		</nav>
 
@@ -56,42 +71,51 @@
 
 						<ul class="catalog-fieldset-box catalog-grid--flex">
 
-							<li class="catalog-fieldset-box__item"><label class="catalog-radio">Адаптивная
-								<input class="catalog-radio__input" type="radio" name="grid" value="adapt">
-							</label></li>
-
-							<li class="catalog-fieldset-box__item"><label class="catalog-radio">Фиксированная
-								<input class="catalog-radio__input" type="radio" name="grid" value="fix">
-							</label></li>
-
-							<li class="catalog-fieldset-box__item"><label class="catalog-radio">Резиновая
-								<input class="catalog-radio__input" type="radio" name="grid" value="stretch">
-							</label></li>
+							<li class="catalog-fieldset-box__item">
+								<input id="adapt" class="catalog-radio__input visually-hidden" type="radio" name="grid" value="adapt" checked>
+								<label for="adapt" class="catalog-radio">Адаптивная
+								</label>
+							</li>
+							<li class="catalog-fieldset-box__item">
+								<input id="fix" class="catalog-radio__input visually-hidden" type="radio" name="grid" value="fix">
+								<label for="fix" class="catalog-radio">Фиксированная
+								</label>
+							</li>
+							<li class="catalog-fieldset-box__item">
+								<input id="stretch" class="catalog-radio__input visually-hidden" type="radio" name="grid" value="stretch">
+								<label for="stretch" class="catalog-radio">Резиновая
+								</label>
+							</li>
 						</ul>
 					</fieldset>
 
 					<fieldset class="catalog-fieldset catalog--special">
 						<legend class="catalog-fieldset__legend">Особенности:</legend>
 						<ul class="catalog-fieldset-box catalog-special--flex">
-							<li class="catalog-fieldset-box__item"><label class="catalog-checkbox">Слайдер
-								<input class="catalog-checkbox__input" type="checkbox" name="">
-							</label></li>
+							<li class="catalog-fieldset-box__item">	
+								<input id="slider" class="catalog-checkbox__input visually-hidden" type="checkbox" name="">
+								<label for="slider" class="catalog-checkbox">Слайдер</label>
+							</li>
 
-							<li class="catalog-fieldset-box__item"><label class="catalog-checkbox">Блок преимуществ
-								<input class="catalog-checkbox__input" type="checkbox" name="">
-							</label></li>
+							<li class="catalog-fieldset-box__item">
+								<input id="advent" class="catalog-checkbox__input visually-hidden" type="checkbox" name="">
+								<label for="advent" class="catalog-checkbox">Блок преимуществ</label>
+							</li>
 
-							<li class="catalog-fieldset-box__item"><label class="catalog-checkbox">Новости
-								<input class="catalog-checkbox__input" type="checkbox" name="">
-							</label></li>
+							<li class="catalog-fieldset-box__item">
+								<input id="news" class="catalog-checkbox__input visually-hidden" type="checkbox" name="">
+								<label for="news" class="catalog-checkbox">Новости</label>
+							</li>
 
-							<li class="catalog-fieldset-box__item"><label class="catalog-checkbox">Галерея
-								<input class="catalog-checkbox__input" type="checkbox" name="">
-							</label></li>
+							<li class="catalog-fieldset-box__item">
+								<input id="gal" class="catalog-checkbox__input visually-hidden" type="checkbox" name="">
+								<label for="gal" class="catalog-checkbox">Галерея</label>
+							</li>
 
-							<li class="catalog-fieldset-box__item"><label class="catalog-checkbox">Корзина
-								<input class="catalog-checkbox__input" type="checkbox" name="">
-							</label></li>
+							<li class="catalog-fieldset-box__item">
+								<input id="cart" class="catalog-checkbox__input visually-hidden" type="checkbox" name="">
+								<label for="cart" class="catalog-checkbox">Корзина</label>
+							</li>
 						</ul>
 
 					</fieldset>
